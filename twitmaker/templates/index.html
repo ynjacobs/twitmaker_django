@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Twitmaker</h1>
+  <ol>
+    {% for tweet in tweets %}
+      <li>
+        <p> {{ tweet.created_at }} </p>
+        <p> {{ tweet.message }} </p>  
+      </li>
+    {% endfor %}
+  </ol>
+  <form action="{% url 'create_tweet' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Tweet">
+  </form>
+{% endblock %}
