@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Twitmaker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'> </script>
     <script type="text/javascript" src="{% static 'js/main.js' %}"> </script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
   </head>
   <body>
+    <header>
+      <h1 class="logo">Twitmaker</h1>
+    </header>
 
-    {% block content %}
-    {% endblock %}
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
 
   </body>
 </html>

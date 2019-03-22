@@ -1,0 +1,97 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-top: 40px;
+  padding-bottom: 3rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+  background-color: cadetblue;
+  text-align: center;
+  line-height: 40px;
+}
+
+.tweets {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.tweet {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.tweet > p {
+  margin: 0 0 0.5em;
+}
+
+.tweet > time {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+ .new-tweet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 3rem;
+  background: #333;
+  color: #eee;
+  align-items: center;
+}
+
+.new-tweet > p {
+  height: 3rem;
+}
+
+.new-tweet > p > textarea {
+  width: 100%;
+}
+
+.new-tweet > p > label {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+.create-tweet {
+  border: 0;
+  background-color: cadetblue;
+  height: 3rem;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
